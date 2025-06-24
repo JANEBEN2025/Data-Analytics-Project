@@ -19,8 +19,12 @@ Using a CASE statement to categorize customers based on their average transactio
 Group the customers by frequency category and calculate the customer count and average transactions per month for each category.
 
 PROJECT_Q3
+Join the savings_savingsaccount and plans_plan tables based on plan_id.
+Use MAX(s.transaction_date) to get the last transaction date for each account.
+Use DATEDIFF(CURRENT_DATE, MAX(s.transaction_date)) to calculate the number of days since the last transaction.
+Use the HAVING clause to filter accounts with no transactions in the last year.
+Use DATE_SUB(CURRENT_DATE, INTERVAL 1 YEAR) to get the date one year ago.
+Use ORDER BY to sort the accounts by inactivity days in descending order.
 
-
-
-
+PROJECT_Q4
 
